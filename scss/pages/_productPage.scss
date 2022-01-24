@@ -1,0 +1,123 @@
+@use "../custom" as *;
+@use "../styleComps" as *;
+@use "../breakpoint" as *;
+
+.productPage {
+  .bungkus {
+    display: flex;
+    padding: 50px;
+    @include md {
+      flex-direction: column;
+      padding: 30px;
+    }
+    @include sm {
+      padding: 10px;
+    }
+
+    .imgCont {
+      flex: 1;
+
+      img {
+        width: 100%;
+        height: 85vh;
+        object-fit: cover;
+        @include md {
+          height: calc(40vh + (100vw / 5));
+        }
+      }
+    }
+    .infoCont {
+      flex: 1;
+      padding: 0 50px;
+      @include md {
+        padding: 30px;
+      }
+      @include sm {
+        padding: 10px;
+      }
+
+      .title {
+        font-weight: 200;
+      }
+      .desc {
+        margin: 20px 0;
+      }
+      .price {
+        font-weight: 100;
+        font-size: 40px;
+      }
+      .filterCont {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 0;
+
+        @include select-1;
+
+        .filter {
+          display: flex;
+          align-items: center;
+
+          .title {
+            font-size: 18px;
+            font-weight: 500;
+            margin-right: 10px;
+          }
+
+          .colorCont {
+            position: relative;
+            .color {
+              width: 20px;
+              height: 20px;
+              border-radius: 50%;
+              margin-right: 10px;
+              cursor: pointer;
+              box-sizing: border-box;
+            }
+            input#colorCheck {
+              cursor: pointer;
+              position: absolute;
+              width: 20px;
+              height: 20px;
+              top: 0;
+              left: 0;
+              opacity: 0;
+              &:checked + .color {
+                border: 2px solid teal;
+              }
+            }
+          }
+        }
+      }
+      .addCont {
+        display: flex;
+        align-items: center;
+        width: 50%;
+        margin: 40px 0;
+
+        .amountCont {
+          display: flex;
+          align-items: center;
+          font-weight: 700;
+          margin-right: 10px;
+
+          .amount {
+            width: 30px;
+            height: 30px;
+            border-radius: 10px;
+            border: 1px solid teal;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 5px;
+          }
+
+          .bi {
+            font-size: 20px;
+            cursor: pointer;
+          }
+        }
+        @include button-1;
+      }
+    }
+  }
+}

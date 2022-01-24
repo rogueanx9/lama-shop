@@ -1,0 +1,26 @@
+@use "custom";
+
+//Addition
+@use "./animations";
+
+//Typography
+@use "./typography/font";
+
+// Components
+@use "./components/navbar";
+@use "./components/announcements";
+@use "./components/slider";
+@use "./components/categories";
+@use "./components/categoryItem";
+@use "./components/products";
+@use "./components/product";
+@use "./components/newsletter";
+@use "./components/footer";
+@use "./components/cartProduct";
+
+// Pages
+@use "./pages/productlist";
+@use "./pages/productPage";
+@use "./pages/register";
+@use "./pages/login";
+@use "./pages/cart";

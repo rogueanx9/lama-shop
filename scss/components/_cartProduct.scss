@@ -1,0 +1,63 @@
+@use "../custom" as *;
+@use "../breakpoint" as *;
+
+.cartproduct {
+  display: flex;
+  justify-content: space-between;
+  height: max-content;
+  @include sm {
+    flex-direction: column;
+  }
+
+  .productDetails {
+    flex: 2;
+    display: flex;
+    img {
+      width: 200px;
+    }
+    .details {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      .name {
+      }
+      .id {
+      }
+      .color {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+      }
+      .size {
+      }
+    }
+  }
+  .priceDetails {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    @include sm {
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .productAmountCont {
+      display: flex;
+      margin: 10px 0;
+      font-size: 20px;
+
+      .bi {
+        margin: 0 10px;
+        cursor: pointer;
+      }
+    }
+    .price {
+      font-size: 30px;
+      font-weight: 300;
+    }
+  }
+}

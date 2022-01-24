@@ -1,0 +1,37 @@
+@use "../custom" as *;
+@use "../styleComps" as *;
+@use "../breakpoint" as *;
+
+.login {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.5) 25%,
+        rgba(0, 0, 0, 0.3)
+      )
+      100%,
+    url("https://images.pexels.com/photos/6984650/pexels-photo-6984650.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
+      center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .bungkus {
+    width: 35%;
+    padding: 20px;
+    background-color: #fff;
+    @include sm {
+      width: 75%;
+    }
+
+    .title {
+      font-size: 24px;
+      font-weight: 300;
+    }
+    .error {
+      color: red;
+    }
+    @include form-1(1);
+  }
+}

@@ -1,0 +1,110 @@
+@use "../custom" as *;
+@use "../breakpoint" as *;
+
+.footer {
+  display: flex;
+  @include sm {
+    flex-direction: column;
+  }
+
+  .left {
+    flex: 1;
+    padding: 10px;
+    @include sm {
+      margin-bottom: 20px;
+    }
+
+    .desc {
+      margin: 20px 0;
+      line-height: 20px;
+      padding-right: 5px;
+    }
+
+    .socialCont {
+      display: flex;
+      margin-top: 10px;
+
+      .socialIcon {
+        width: 15px;
+        height: 15px;
+        margin-right: 5px;
+        font-size: 20px;
+        border-radius: 50%;
+        color: #fff;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+    }
+  }
+  .center {
+    flex: 1;
+    padding: 10px;
+    @include md {
+      display: none;
+    }
+
+    .title {
+      margin-bottom: 30px;
+    }
+    .items {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+
+      .item {
+        width: 50%;
+        padding: 10px 0;
+        cursor: pointer;
+        position: relative;
+
+        &:hover {
+          &::after {
+            transform: scaleX(2);
+            left: -6px;
+          }
+        }
+
+        &::after {
+          display: block;
+          content: "";
+          height: 60%;
+          width: 1px;
+          background-color: teal;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          left: -5px;
+          transform: scaleX(1);
+          transition: all 0.1s linear;
+        }
+      }
+    }
+  }
+  .right {
+    flex: 1;
+    padding: 10px;
+    @include sm {
+      background-color: rgb(245, 245, 245);
+    }
+
+    .title {
+      margin-bottom: 30px;
+    }
+    .contactItem {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+
+      .bi {
+        margin-right: 10px;
+        font-size: 20px;
+      }
+    }
+  }
+}

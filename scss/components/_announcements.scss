@@ -1,0 +1,11 @@
+@use "../custom" as *;
+
+.announcement {
+  height: max-content;
+  background-color: teal;
+  color: white;
+  padding: 5px 0;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+}

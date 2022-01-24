@@ -1,0 +1,78 @@
+@use "../custom" as *;
+@use "../breakpoint" as *;
+
+.navbar {
+  height: 60px;
+  @include sm {
+    height: max-content;
+  }
+
+  .wrapper {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include sm {
+      padding: 10px 0;
+      flex-direction: column-reverse;
+    }
+
+    .left {
+      flex: 1;
+      display: flex;
+      align-items: center;
+
+      .lang {
+        font-size: 14px;
+        cursor: pointer;
+        @include sm {
+          display: none;
+        }
+      }
+
+      .searchCont {
+        border: 0.5px solid lightgray;
+        display: flex;
+        align-items: center;
+        margin-left: 25px;
+        padding: 5px;
+        @include sm {
+          margin: 10px 0;
+        }
+
+        .input {
+          border: none;
+          outline: none;
+        }
+      }
+    }
+    .center {
+      flex: 1;
+      text-align: center;
+
+      .logo {
+        font-weight: bold;
+        cursor: pointer;
+        @include sm {
+          font-size: 24px;
+        }
+      }
+    }
+    .right {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      .menuItem {
+        font-size: 14px;
+        cursor: pointer;
+        margin-left: 25px;
+        @include sm {
+          font-size: 12px;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+@use "../custom" as *;
+@use "../breakpoint" as *;
+
+.newsletter {
+  height: 60vh;
+  background-color: #fcf5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .title {
+    font-size: 60px;
+    margin-bottom: 20px;
+    @include sm {
+      font-size: 40px;
+    }
+  }
+  .desc {
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .inputCont {
+    width: 50%;
+    height: 40px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid lightgray;
+    @include sm {
+      width: 80%;
+    }
+
+    input {
+      flex: 8;
+      padding-left: 10px;
+      font-size: 18px;
+      border: none;
+      outline: none;
+      @include sm {
+        flex: 5;
+      }
+    }
+    button {
+      flex: 1;
+      border: none;
+      background-color: teal;
+      color: #fff;
+      font-size: 20px;
+      cursor: pointer;
+    }
+  }
+}

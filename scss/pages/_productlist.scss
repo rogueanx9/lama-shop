@@ -1,0 +1,31 @@
+@use "../custom" as *;
+@use "../styleComps" as *;
+@use "../breakpoint" as *;
+
+.productList {
+  .title {
+    text-align: center;
+    margin: 20px 0;
+    text-transform: capitalize;
+  }
+  .filterCont {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    @include sm {
+      flex-direction: column;
+    }
+
+    .filter {
+      @include sm {
+        margin-bottom: 10px;
+      }
+      .filterText {
+        font-size: 20px;
+        font-weight: 600;
+        margin-right: 10px;
+      }
+      @include select-1;
+    }
+  }
+}

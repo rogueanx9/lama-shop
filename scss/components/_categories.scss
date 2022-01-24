@@ -1,0 +1,12 @@
+@use "../custom" as *;
+@use "../breakpoint" as *;
+
+.categories {
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  @include sm {
+    padding: 0;
+    flex-direction: column;
+  }
+}
