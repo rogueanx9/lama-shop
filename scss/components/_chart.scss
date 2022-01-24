@@ -1,0 +1,8 @@
+@use "../custom" as *;
+
+.chart {
+  margin: 20px;
+  padding: 20px;
+  border: 2px solid $primary;
+  border-radius: 10px;
+}

@@ -1,0 +1,12 @@
+@use "../custom" as *;
+
+.home {
+  .sideMain {
+    display: flex;
+    margin-top: 10px;
+
+    p {
+      flex: 4;
+    }
+  }
+}

@@ -1,0 +1,76 @@
+@use "../custom" as *;
+
+.newUser {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .item {
+      width: 400px;
+      display: flex;
+      flex-direction: column;
+      margin: 10px 20px 0 0;
+
+      .uploaded {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        img {
+          width: 150px;
+          height: 150px;
+          object-fit: cover;
+          border-radius: 50%;
+          border: 3px solid $primary;
+        }
+      }
+
+      label {
+        margin-bottom: 10px;
+        font-size: 14px;
+        font-weight: 600;
+        color: gray;
+      }
+      input {
+        padding: 10px;
+        border: 1px solid gray;
+        border-radius: 3px;
+      }
+
+      select {
+        padding: 10px;
+        border-radius: 3px;
+      }
+
+      .genderCont {
+        label {
+          margin-right: 5px;
+        }
+        input {
+          margin-right: 5px;
+        }
+      }
+    }
+    .createButton {
+      width: 200px;
+      margin: 0 300px;
+      border: none;
+      background-color: rgb(18, 18, 180);
+      color: white;
+      padding: 5px 10px;
+      font-weight: 600;
+      border-radius: 3px;
+      margin-top: 30px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: darkblue;
+      }
+    }
+  }
+}

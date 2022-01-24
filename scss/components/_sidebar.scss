@@ -1,0 +1,17 @@
+@use "../custom" as *;
+
+.sidebar {
+  flex: 1;
+  height: calc(100vh - 50px);
+  background-color: #fff;
+  position: sticky;
+  top: 50px;
+  border: 2px solid $primary;
+  border-radius: 10px;
+  margin: 0 10px 10px 10px;
+
+  .cont {
+    padding: 20px;
+    color: #555;
+  }
+}

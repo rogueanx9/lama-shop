@@ -1,0 +1,24 @@
+@use "./custom";
+
+//Components
+@use "./components/topbar";
+@use "./components/sidebar";
+@use "./components/sidebarmenu";
+@use "./components/featuredInfo";
+@use "./components/featuredItem";
+@use "./components/chart";
+@use "./components/widgetLg";
+@use "./components/widgetSm";
+
+//Pages
+@use "./pages/home";
+
+//Partial Pages
+@use "./sections/homeSection";
+@use "./sections/usersSection";
+@use "./sections/userSection";
+@use "./sections/newUser";
+@use "./sections/prodList";
+@use "./sections/productSection";
+@use "./sections/newProduct";
+@use "./sections/loginSection";

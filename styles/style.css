@@ -1,0 +1,713 @@
+.topbar {
+  width: 100%;
+  height: 50px;
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+.topbar .topbarCont {
+  height: 100%;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.topbar .topbarCont .left .logo {
+  font-weight: bold;
+  font-size: 30px;
+  color: #9090ff;
+  cursor: pointer;
+}
+.topbar .topbarCont .right {
+  display: flex;
+  align-items: center;
+}
+.topbar .topbarCont .right .icon {
+  cursor: pointer;
+  margin-right: 10px;
+  color: #555;
+  position: relative;
+}
+.topbar .topbarCont .right .icon:hover .popUp {
+  display: flex;
+}
+.topbar .topbarCont .right .icon .popUp {
+  max-width: 250px;
+  display: none;
+  flex-direction: column;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.6), 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #fff;
+  position: absolute;
+  top: 25px;
+  right: 0;
+}
+.topbar .topbarCont .right .icon .popUp .popItems {
+  list-style: none;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.topbar .topbarCont .right .icon .popUp .popItems .popItem {
+  padding: 10px;
+}
+.topbar .topbarCont .right .icon .popUp .popItems .popItem:hover {
+  background-color: #f0f0f0;
+}
+.topbar .topbarCont .right .topAvatar {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.2s ease;
+}
+.topbar .topbarCont .right .topAvatar:hover {
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.8), 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar {
+  flex: 1;
+  height: calc(100vh - 50px);
+  background-color: #fff;
+  position: sticky;
+  top: 50px;
+  border: 2px solid #9090ff;
+  border-radius: 10px;
+  margin: 0 10px 10px 10px;
+}
+.sidebar .cont {
+  padding: 20px;
+  color: #555;
+}
+
+.sidebarMenu {
+  margin-bottom: 10px;
+}
+.sidebarMenu .title {
+  font-size: 16px;
+  color: #acacac;
+  text-transform: capitalize;
+}
+.sidebarMenu .items {
+  list-style: none;
+  padding: 5px;
+}
+.sidebarMenu .items .item {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  text-transform: capitalize;
+}
+.sidebarMenu .items .item:hover {
+  background-color: #e4e4fa;
+}
+.sidebarMenu .items .item.active {
+  background-color: #d7d7f0;
+}
+.sidebarMenu .items .item .icon {
+  font-size: 20px !important;
+  margin-right: 5px;
+}
+
+.featured {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.featuredItem {
+  flex: 1;
+  margin: 0 20px;
+  padding: 30px;
+  border-radius: 10px;
+  border: 2px solid #9090ff;
+}
+.featuredItem .title {
+  font-size: 20px;
+}
+.featuredItem .moneyCont {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+.featuredItem .moneyCont .money {
+  font-weight: 600;
+  font-size: 30px;
+}
+.featuredItem .moneyCont .moneyRate {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+.featuredItem .moneyCont .moneyRate .icon {
+  font-size: 14px;
+  margin-left: 5px;
+  color: green;
+}
+.featuredItem .moneyCont .moneyRate .icon.negative {
+  color: red;
+}
+.featuredItem .sub {
+  color: gray;
+}
+
+.chart {
+  margin: 20px;
+  padding: 20px;
+  border: 2px solid #9090ff;
+  border-radius: 10px;
+}
+
+.widgetlg {
+  flex: 2;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #9090ff;
+}
+.widgetlg .title {
+  font-size: 24px;
+  font-weight: 600;
+}
+.widgetlg table {
+  width: 100%;
+  border-spacing: 20px;
+}
+.widgetlg table tr th {
+  text-align: left;
+}
+.widgetlg table tr .user {
+  display: flex;
+  align-items: center;
+}
+.widgetlg table tr .user .name {
+  font-weight: 600;
+}
+.widgetlg table tr .user img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 5px;
+  margin-right: 10px;
+  border: 2px solid #9090ff;
+}
+.widgetlg table tr .date,
+.widgetlg table tr .amount {
+  font-weight: 300;
+}
+.widgetlg table tr .status .buttonTr {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  text-transform: capitalize;
+}
+.widgetlg table tr .status .buttonTr.approved {
+  background-color: #e5faf2;
+  color: #3bb077;
+}
+.widgetlg table tr .status .buttonTr.declined {
+  background-color: #fff0f1;
+  color: #d95087;
+}
+.widgetlg table tr .status .buttonTr.pending {
+  background-color: #ebf1fe;
+  color: #2a7ade;
+}
+
+.widgetsm {
+  flex: 1;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #9090ff;
+  margin-right: 20px;
+}
+.widgetsm .title {
+  font-size: 24px;
+  font-weight: 600;
+}
+.widgetsm .items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.widgetsm .items .item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+.widgetsm .items .item img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #9090ff;
+}
+.widgetsm .items .item .userDetails {
+  display: flex;
+  flex-direction: column;
+}
+.widgetsm .items .item .userDetails .name {
+  font-weight: 600;
+}
+.widgetsm .items .item .userDetails .job {
+  font-weight: 300;
+}
+.widgetsm .items .item button {
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: #eeeef7;
+  color: #555;
+  cursor: pointer;
+}
+.widgetsm .items .item button:hover {
+  background-color: #e6e6f8;
+}
+.widgetsm .items .item button .icon {
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+.home .sideMain {
+  display: flex;
+  margin-top: 10px;
+}
+.home .sideMain p {
+  flex: 4;
+}
+
+.homeSection {
+  flex: 4;
+}
+.homeSection .homeWidgets {
+  display: flex;
+  margin: 20px;
+}
+
+.usersSection {
+  flex: 4;
+}
+
+.userSection {
+  flex: 4;
+  padding: 20px;
+}
+.userSection .titleCont {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.userSection .titleCont button {
+  width: 80px;
+  border: none;
+  padding: 5px;
+  background-color: teal;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+}
+.userSection .titleCont button:hover {
+  background-color: #006969;
+}
+.userSection .userCont {
+  display: flex;
+  margin-top: 20px;
+}
+.userSection .userCont .show {
+  flex: 1;
+  padding: 20px;
+  border-radius: 5px;
+  border: 2px solid #9090ff;
+  margin-right: 10px;
+}
+.userSection .userCont .show .top {
+  display: flex;
+  align-items: center;
+}
+.userSection .userCont .show .top img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 2px solid #9090ff;
+}
+.userSection .userCont .show .top .details .name {
+  font-weight: 600;
+}
+.userSection .userCont .show .top .details .job {
+  font-weight: 300;
+}
+.userSection .userCont .show .bottom {
+  margin-top: 20px;
+}
+.userSection .userCont .show .bottom .title {
+  font-size: 14px;
+  font-weight: 600;
+  color: gray;
+}
+.userSection .userCont .show .bottom .infoCont {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+.userSection .userCont .show .bottom .infoCont .icon {
+  font-size: 18px;
+  margin-right: 10px;
+}
+.userSection .userCont .update {
+  flex: 2;
+  padding: 20px;
+  border-radius: 5px;
+  border: 2px solid #9090ff;
+}
+.userSection .userCont .update .title {
+  font-size: 24px;
+  font-weight: 600;
+}
+.userSection .userCont .update form {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.userSection .userCont .update form .left .item {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.userSection .userCont .update form .left .item label {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+.userSection .userCont .update form .left .item input {
+  border: none;
+  outline: none;
+  padding: 10px;
+  width: 250px;
+  border-bottom: 1px solid gray;
+}
+.userSection .userCont .update form .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.userSection .userCont .update form .right .upload {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.userSection .userCont .update form .right .upload label {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  cursor: pointer;
+}
+.userSection .userCont .update form .right .upload label:hover {
+  opacity: 1;
+}
+.userSection .userCont .update form .right .upload label .icon {
+  cursor: pointer;
+  color: white;
+}
+.userSection .userCont .update form .right .upload img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.userSection .userCont .update form .right .updateButton {
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  background-color: darkblue;
+  color: white;
+}
+
+.newUser {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.newUser form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.newUser form .item {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 20px 0 0;
+}
+.newUser form .item .uploaded {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.newUser form .item .uploaded img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #9090ff;
+}
+.newUser form .item label {
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: gray;
+}
+.newUser form .item input {
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 3px;
+}
+.newUser form .item select {
+  padding: 10px;
+  border-radius: 3px;
+}
+.newUser form .item .genderCont label {
+  margin-right: 5px;
+}
+.newUser form .item .genderCont input {
+  margin-right: 5px;
+}
+.newUser form .createButton {
+  width: 200px;
+  margin: 0 300px;
+  border: none;
+  background-color: #1212b4;
+  color: white;
+  padding: 5px 10px;
+  font-weight: 600;
+  border-radius: 3px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+.newUser form .createButton:hover {
+  background-color: darkblue;
+}
+
+.prodList {
+  flex: 4;
+}
+
+.productSection {
+  flex: 4;
+  padding: 20px;
+}
+.productSection .titleCont {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.productSection .titleCont button {
+  width: 80px;
+  border: none;
+  padding: 5px;
+  background-color: teal;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+}
+.productSection .titleCont button:hover {
+  background-color: #006969;
+}
+.productSection .prodTop {
+  display: flex;
+}
+.productSection .prodTop .left {
+  flex: 1;
+}
+.productSection .prodTop .right {
+  flex: 1;
+  padding: 20px;
+  margin: 20px;
+  border: 2px solid #9090ff;
+  border-radius: 10px;
+}
+.productSection .prodTop .right .infoTop {
+  display: flex;
+  align-items: center;
+}
+.productSection .prodTop .right .infoTop .name {
+  font-weight: 600;
+}
+.productSection .prodTop .right .infoTop img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+.productSection .prodTop .right .infoBottom {
+  margin-top: 10px;
+}
+.productSection .prodTop .right .infoBottom .item {
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+.productSection .prodTop .right .infoBottom .item .value {
+  font-weight: 300;
+}
+.productSection .prodBottom {
+  padding: 20px;
+  margin: 20px;
+  border: 2px solid #9090ff;
+  border-radius: 10px;
+}
+.productSection .prodBottom form {
+  display: flex;
+  justify-content: space-between;
+}
+.productSection .prodBottom form .formLeft {
+  display: flex;
+  flex-direction: column;
+}
+.productSection .prodBottom form .formLeft label {
+  margin-bottom: 10px;
+  color: gray;
+}
+.productSection .prodBottom form .formLeft input {
+  margin-bottom: 10px;
+  border: none;
+  padding: 5px;
+  border-bottom: 1px solid gray;
+}
+.productSection .prodBottom form .formLeft select {
+  margin-bottom: 10px;
+}
+.productSection .prodBottom form .formRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.productSection .prodBottom form .formRight .upload {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.productSection .prodBottom form .formRight .upload label {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  cursor: pointer;
+}
+.productSection .prodBottom form .formRight .upload label:hover {
+  opacity: 1;
+}
+.productSection .prodBottom form .formRight .upload label .icon {
+  cursor: pointer;
+  color: white;
+}
+.productSection .prodBottom form .formRight .upload img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.productSection .prodBottom form .formRight .updateButton {
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  background-color: darkblue;
+  color: white;
+}
+
+.newProduct {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.newProduct form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.newProduct form .item {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 20px 0 0;
+}
+.newProduct form .item label {
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: gray;
+}
+.newProduct form .item input {
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 3px;
+}
+.newProduct form .item select {
+  padding: 10px;
+  border-radius: 3px;
+}
+.newProduct form .item .genderCont label {
+  margin-right: 5px;
+}
+.newProduct form .item .genderCont input {
+  margin-right: 5px;
+}
+.newProduct form .createButton {
+  width: 200px;
+  margin: 0 300px;
+  border: none;
+  background-color: #1212b4;
+  color: white;
+  padding: 5px 10px;
+  font-weight: 600;
+  border-radius: 3px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+.newProduct form .createButton:hover {
+  background-color: darkblue;
+}
+
+.loginSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  flex-direction: column;
+}
+.loginSection input {
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.loginSection button {
+  padding: 10px;
+  width: 100px;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,83 @@
+@use "../custom" as *;
+
+.topbar {
+  width: 100%;
+  height: 50px;
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+
+  .topbarCont {
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .left {
+      .logo {
+        font-weight: bold;
+        font-size: 30px;
+        color: $primary;
+        cursor: pointer;
+      }
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+
+      .icon {
+        cursor: pointer;
+        margin-right: 10px;
+        color: #555;
+        position: relative;
+
+        &:hover {
+          .popUp {
+            display: flex;
+          }
+        }
+
+        .popUp {
+          max-width: 250px;
+          display: none;
+          flex-direction: column;
+          box-shadow: 0 0 2px rgba(0, 0, 0, 0.6), 0 0 6px rgba(0, 0, 0, 0.3);
+          border-radius: 10px;
+          background-color: #fff;
+          position: absolute;
+          top: 25px;
+          right: 0;
+
+          .popItems {
+            list-style: none;
+            border-radius: 10px;
+            overflow: hidden;
+
+            .popItem {
+              padding: 10px;
+              &:hover {
+                background-color: rgb(240, 240, 240);
+              }
+            }
+          }
+        }
+      }
+      .topAvatar {
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+        border-radius: 50%;
+        cursor: pointer;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.3);
+        transition: box-shadow 0.2s ease;
+
+        &:hover {
+          box-shadow: 0 0 3px rgba(0, 0, 0, 0.8), 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+      }
+    }
+  }
+}

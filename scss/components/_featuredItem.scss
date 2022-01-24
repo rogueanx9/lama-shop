@@ -1,0 +1,40 @@
+@use "../custom" as *;
+
+.featuredItem {
+  flex: 1;
+  margin: 0 20px;
+  padding: 30px;
+  border-radius: 10px;
+  border: 2px solid $primary;
+
+  .title {
+    font-size: 20px;
+  }
+  .moneyCont {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+
+    .money {
+      font-weight: 600;
+      font-size: 30px;
+    }
+    .moneyRate {
+      display: flex;
+      align-items: center;
+      margin-left: 20px;
+
+      .icon {
+        font-size: 14px;
+        margin-left: 5px;
+        color: green;
+        &.negative {
+          color: red;
+        }
+      }
+    }
+  }
+  .sub {
+    color: gray;
+  }
+}
